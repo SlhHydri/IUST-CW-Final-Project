@@ -72,6 +72,14 @@
 			\item \code{git add main.tex}
 			\item \code{git push}
 		\end{itemize}
-		How the \code{.github/workflows} folder came to be, will explained in the next section (InShaAllah!)}
+		How the \code{.github/workflows} folder came to be, is explained in the next section!}
 	
+	
+	\subsection{GitHub Actions for \LaTeX Compilation}
+	Provide a walkthrough of setting up GitHub Actions to automatically compile your \LaTeX 
+	document and any challenges you encountered. \\
+	\textbf{It was hassle-free task thanks to the provided \code{.github/workflows} folder!
+		\\
+		But here's a simple way to do that: You can start by making the directory \code{.github/workflows}, downloading the file \code{main.yml} from the provided repository and moving it there, and pushing the changes you have done as of now in your local machine to the GitHub server using the command \code{git push}.\\
+		The real challenge was the Action failing to compile the \code{main.tex} file, due to an error in the \TeX document (usage of \# without the backslash before it), which was fixed in the commits that followed.}
 \end{document}
