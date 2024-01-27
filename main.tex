@@ -82,4 +82,20 @@
 		\\
 		But here's a simple way to do that: You can start by making the directory \code{.github/workflows}, downloading the file \code{main.yml} from the provided repository and moving it there, and pushing the changes you have done as of now in your local machine to the GitHub server using the command \code{git push}.\\
 		The real challenge was the Action failing to compile the \code{main.tex} file, due to an error in the \TeX document (usage of \# without the backslash before it), which was fixed in the commits that followed.}
+	
+	\section{Exploration Tasks}
+	\subsection{Vim Advanced Features}
+	Explore and document 3 advanced features of Vim that were not covered in class.
+	\textbf{
+		\begin{enumerate}
+			\item For times you may have opened a file without adding the \code{sudo} behind your command, made some changes, and now cannot save them, you can use the following command: \\ \code{:w !sudo tee \%}  
+			\item For times you may want to convert all tabs to spaces in a file you are editing, you can use the following commands: \\
+			\code{:set expandtab \\
+				:set tabstop=4 \\
+				:set shiftwidth=4 \\
+				:retab}
+			\item For times you want to spell-check your file---similar to what happens at applications like \textit{MS Word}---so the wrong-spelled words are highlighted, you can use the following command: \\
+			\code{:set spell}
+		\end{enumerate}
+	}
 \end{document}
