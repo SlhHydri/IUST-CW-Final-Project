@@ -135,11 +135,20 @@
 		\\
 		\textbf{HINT:} use the command \code{fd} for this purpose.
 		\\
-		\textit{(Since I couldn't install fd on WSL which I'm currently working on, I had to use \code{find} instead):}
+		\textbf{NOTE: }\textit{Since I couldn't install ``fd" on WSL---which I'm currently working on---I had to use \code{find} instead:}
 		\\
 		\textbf{\code{find . -type f -name "*.pdf"}}
 		\item Now we have to select the PDF we want using \textit{fzf}. Write a command to use \textit{fzf} to select a PDF from the data we gathered above.
 		\\
 		\textbf{\code{find . -type f -name "*.pdf" | fzf}}
 	\end{enumerate}
+	
+	\subsubsection{Opening the file using Zathura}
+	Now that we have selected which PDF we want to open, we can use a very minimalistic program called \textit{Zathura} to open it. Write a command that uses the commands above to open the file using \textit{Zathura}.
+	\\
+	\textbf{HINT:} This is how Zathura opens files: \code{zathura /path/to/file}
+	\\
+	\textbf{HINT:} Learn what the syntax \code{zathura \$(command)} does and use it to open the PDF we have selected.
+	\\
+	\textbf{\code{zathura \$(find . -type f -name "*.pdf" | fzf)}}
 \end{document}
