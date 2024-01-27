@@ -106,4 +106,9 @@
 	In short, explain what memory leaks are and how they might happen in your program.
 	\\
 	\textbf{Memory leaks happen when a proportion of your computer's memory is allocated to some data and then forgotten to be freed afterwards. They may happen when you do not free your memory after dynamically allocating it, due to some bugs, abrupt termination of the program, or when you have used some large global variables that do not let go of their allocated memory after you are done with them.}
+	
+	\subsubsection{Memory profilers}
+	Read about a tool called \textit{Valgrind} and write about their purpose and how it helps when memory leaks happen.
+	\\
+	\textbf{\textit{Valgrind} is an open-source software used for detecting memory-related anomalies, debugging them, and solving many memory-related challenges. When it comes to memory leaks, \textit{Valgrind} can \underline{detect} them (by simulating the execution of your program and seeing whether after it's done, is any memory still occupied or not), \underline{pointing} to the leak (the line of code, the size of the memory leaked, etc.), and sometimes \underline{suppress} some of the leaks (for example when faced with harmless leaks in some pre-installed libraries, or when you---for some reasons---intentionally want your program not to release the memory used).}
 \end{document}
