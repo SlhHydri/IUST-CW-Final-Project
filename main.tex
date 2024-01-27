@@ -126,4 +126,20 @@
 		\\
 		\textbf{It displays all files and directories in your current location, and lets you search among them. This is done using \textit{pipe} (\code{|}), giving the output of \code{ls} (a list of files and directories in your current location) to \code{fzf} in order to fuzzy search for what you are looking for.}
 	\end{itemize}
+	
+	\subsubsection{Using fzf to find your favorite PDF}
+	You might have came across moments when you want to open up a certain PDF when studying for your final exams but finding the directory of that PDF is a very gruesome and tiring process. In this section, we will be using \textit{fzf} to find our PDF in seconds! We will be going step by step on how to find your file and use \textit{fzf} to select it.
+	\begin{enumerate}
+		\item We first need to list the directory of all the files with the extension \code{.PDF}. Write a
+		command to list the directory of all the files with the extension \code{.PDF}
+		\\
+		\textbf{HINT:} use the command \code{fd} for this purpose.
+		\\
+		\textit{(Since I couldn't install fd on WSL which I'm currently working on, I had to use \code{find} instead):}
+		\\
+		\textbf{\code{find . -type f -name "*.pdf"}}
+		\item Now we have to select the PDF we want using \textit{fzf}. Write a command to use \textit{fzf} to select a PDF from the data we gathered above.
+		\\
+		\textbf{\code{find . -type f -name "*.pdf" | fzf}}
+	\end{enumerate}
 \end{document}
